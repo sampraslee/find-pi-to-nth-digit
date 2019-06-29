@@ -12,7 +12,7 @@ def prompt_user_input
 end
 # Checks if the input has a decimal point to prevent users from using non-integers
 def check_input(input)
-    if (input.include? ".") 
+    if input.match(/\D/) 
         puts "We only accept whole numbers."
         prompt_user_input
     else
